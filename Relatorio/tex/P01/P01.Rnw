@@ -1,0 +1,48 @@
+\documentclass[../../relatorio.tex]{subfiles}
+\begin{document}
+
+<<echo=false>>=
+  library(xtable)
+  #proveniente do arquivo /Scripts/R/001.ContextoMacro.R
+  load('../../../Scripts/R/P01.RData')
+@
+
+Em decorrência da importância e influência direta no desempenho dos mercados de Seguros, Capitalização e Previdência, os seguintes indicadores serão analisados com mais detalhes
+\begin{description}
+  \item[Desocupação] Taxa oficial de desemprego no Brasil, divulgado na Pesquisa Mensal do Emprego (PME) pelo IBGE
+  \item[Dívida Pública] Dívida pública brasileira medida em relação ao PIB
+  \item[IPCA] Inflação oficial medida pelo Instituto Brasileiro de Geografia e Estatística (IBGE)
+  \item[Juros] Taxa básica de Juros (SELIC), estipulada mensalmente pelo Comitê de Política Monetária (COPOM) do Banco Central Brasileiro
+  \item[PIB] Produto Interno Bruto, divulgado trimestralmente pelo IBGE
+  \item[Reservas Internacionais] em USD, divulgados diariamente pelo Banco Central Brasileiro
+  \item[IBovespa] Índice da Bolsa de Valores de São Paulo (Bovespa)
+  \item[Câmbio] das principais moedas extrangeiras - USD, EUR e GBP
+  \item[EMBI+Br] Risco Brasil, divulgado diariamente pela Standard and Poors
+  \end{description}
+
+\section{Painel Macroeconômico}
+
+%No mês de \Sexpr{mes.por.extenso(susep_ref)} muda.
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        indices.atuais[, 4:5]
+                      , caption = "Principais indicadores macroeconômicos"
+                      ,
+                     )
+             , include.rownames  = FALSE
+             , include.colnames  = FALSE
+             , hline.after       = c(0, nrow(indices.atuais) )
+            )
+@
+
+\pagebreak
+
+\begin{figure}[ht]
+  \begin{minipage}{0.70\textheight}
+    \centering
+      \includegraphics[width=0.7\textheight]{PainelMacro.pdf}
+  \end{minipage}
+\end{figure}
+
+\end{document}

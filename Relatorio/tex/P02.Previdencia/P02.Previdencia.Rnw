@@ -1,0 +1,106 @@
+\documentclass[../../relatorio.tex]{subfiles}
+\begin{document}
+
+
+<<echo=false>>=
+  load('../../../Scripts/R/P02.RData')
+  library(xtable)
+
+  #Prev              <-   Seguros.Detalha( Segmento = "Previdência (EAPC)", Nível = "class2" )
+
+  #Prev.YTD.A        <- round( Prev$ev.YTD[ nrow(Prev$ev.YTD)    , 3 ], digits = 1 )
+  #Prev.YTD.Am1      <- round( Prev$ev.YTD[ nrow(Prev$ev.YTD) - 1, 3 ], digits = 1 )
+
+  #Prev.Perc.Mercado <- round( Prev$ev.Tabela[ nrow(Prev$ev.Tabela) - 1, ncol(Prev$ev.Tabela) - 1 ], digits = 1 )
+  #Prev.Dez.Am1      <- round( Prev$ev.Tabela[ nrow(Prev$ev.Tabela) - 2, ncol(Prev$ev.Tabela) - 1 ], digits = 1 )
+
+  #Prev.Banco.A      <- round( 100 * Prev$ev.Bancos[ nrow(Prev$ev.Bancos)    , 3 ], digits = 1 )
+  #Prev.Banco.Am5    <- round( 100 * Prev$ev.Bancos[ nrow(Prev$ev.Bancos) - 4, 3 ], digits = 1 )
+  #Prev.Banco.Am10   <- round( 100 * Prev$ev.Bancos[ nrow(Prev$ev.Bancos) - 9, 3 ], digits = 1 )
+@
+
+\section{Previdência}
+
+A Previdência Privada tem caráter complementar à Previdência Social (de contribuição obrigatória) no Brasil e é dividida basicamente em 2 regimes: aberto e fechado.
+
+\begin{description}
+  \item[Regime Fechado de Previdência Complementar] É supervisionado pela Secretaria de Previdencia Complementar, ligada ao Ministerio da Fazenda. As empresas que estão autorizadas a comercializar estes planos fechados são denominadas Entidades Fechadas de Previdencia Complementar (EFPC), mais conhecidas porém pelo termo \textbf{Fundos de Pensão}. Ele é dito fechado pois somente pessoas ligadas a um determinado grupo podem aderir ao plano, podendo estes grupos ser Empresas, Associações, etc.
+
+  \item[Regime Aberto de Previdência Complementar] É supervisionado pela SUSEP e pode ser adquirido por qualquer pessoa. As empresas que operam no mercado são chamadas de Entidades Abertas de Previdencia Complementar (EAPC), sendo que seguradoras também podem comercializar os planos. Este estudo apresenta somente as informações provenientes das EAPC, ou seja, Previdência Complementar Aberta.
+\end{description}
+
+Os planos abertos de Previdência Complementar são dividos por sua vez em 3 grandes grupos: Previdência Tradicional, PGBL e VGBL.
+
+\begin{description}
+  \item[PGBL] (Plano Gerador de Benefício Livre) permite deduzir da base de cálculo do Imposto de Renda até 12\% da renda bruta anual. No momento do resgate ou recebimento dos benefícios haverá cobrança do IR sobre o valor total (contribuições mais rendimentos) recebido. O PGBL não tem garantia de remuneração mínima na fase de acumulação.
+
+  \item[VGBL] (Vida Gerador de Benefício Livre) é um seguro de vida com cobertura por sobrevivência, tem o objetivo de concessão de indenizações em vida ao segurado, tendo características previdenciárias. Apesar de ser semelhante ao PGBL, o VGBL não é um plano de previdência complementar. Ambos são considerados planos de acumulação. Independentemente deste fato, neste relatório o VGBL é classificado no agrupamento 'Previdência'. O VGBL, durante a fase de acumulação, não permite descontar o valor investido na declaração do Imposto de Renda. Porém, ao receber os benefícios o Imposto de Renda incidirá somente nos rendimentos; em outras palavras, o valor acumulado não é taxado pelo Imposto de Renda.
+
+  \item[Planos Tradicionais] operam no regime de contribuiçao definida. O participante aplica o valor previamente determinado, de acordo com o prazo do plano e o valor do benefício. O contrato garante a taxa de juro e o índice de correção monetária aplicáveis até a aposentadoria. Estes sãoo os planos que foram comercializados até o inicio da decada de 90.
+
+\end{description}
+
+Nos últimos anos a comercialização dos planos abertos se concentrou no PGBL e no VGBL, devido ao seus benefícios fiscais e também ao fato de que são comercializados em sua maior parte pelos bancos, empresas com as maiores capilaridades no mercado financeiro brasileiro. Nos últimos anos também passaram a fazer parte dos benefícios oferecidos aos funcionários de empresas, como forma de fidelização.
+
+\pagebreak
+
+Até \Sexpr{ mes.por.extenso( susep_ref ) }, o mercado aberto de Previdência Complementar totaliza BRL \Sexpr{ Prev.YTD.A } Bilhões em Contribuições (contra BRL \Sexpr{ Prev.YTD.Am1 } Bilhões no mesmo período do ano passado). Em dezembro do ano anterior o volume de contribuições representava aproximadamente \Sexpr{ Prev.Perc.Mercado }\% do mercado segurador brasileiro (com BRL \Sexpr{ Prev.Dez.Am1 } Bilhões em Contribuições).
+
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        Prev$ev.Tabela
+                      , digits  = Prev$ev.Dígitos
+                      , caption ="Evolução do Mercado de Previdência. Valores em BRL Bilhões"
+                      ,
+                     )
+             , include.rownames  = FALSE
+             , format.args       = list(big.mark=".",decimal.mark=",")
+             , hline.after       = Prev$ev.Barras
+            )
+@
+
+O mercado de Previdência Complementar Aberta é também fortemente dominado pelas seguradoras ligadas aos bancos: \Sexpr{ Prev.Banco.A }\% dos prêmios até \Sexpr{ mes.por.extenso( susep_ref )} ; há 5 anos elas detinham \Sexpr{ Prev.Banco.Am5 }\% e há 10 anos \Sexpr{ Prev.Banco.Am10 }\%.
+
+
+\begin{table}[!h]
+  \begin{minipage}[t]{0.49\linewidth}
+    \centering
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        Prev$rk.Grupos.YTD
+                      , digits = Prev$rk.Grupos.YTD.Dígitos
+                      ,
+                     )
+             , include.rownames = FALSE
+             , floating         = FALSE
+             , format.args      = list(big.mark=".",decimal.mark=",")
+             , hline.after      = Prev$rk.Grupos.YTD.Barras
+            )
+@
+    \captionof{table}{Contribuições em BRL Bilhões (\Sexpr{ format( susep_ref, format = "%Y/%m" )})}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[t]{0.49\linewidth}
+    \centering
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                         Prev$rk.Grupos.Dez
+                      ,  digits = Prev$rk.Grupos.Dez.Dígitos
+                      ,
+                     )
+             , include.rownames = FALSE
+             , floating         = FALSE
+             , format.args      = list(big.mark=".",decimal.mark=",")
+             , hline.after      = Prev$rk.Grupos.Dez.Barras
+            )
+@
+    \captionof{table}{Contribuições em BRL Bilhões (\Sexpr{ paste( as.numeric(format(susep_ref,"%Y"))-1, "/12", sep="" ) })}
+  \end{minipage}
+\end{table}
+
+\pagebreak
+
+\end{document}

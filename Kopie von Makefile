@@ -1,0 +1,23 @@
+
+
+# Variáveis
+# Diretórios
+DIR_Ind = Indicadores
+DIR_Susep = BaseSES_SUSEP/fonte/CSVs
+
+# 'Indicadores': Inflação, PIB, Juros, Desemprego, Lista de Ramos e Cedentes
+ Ind_Alvo = $(DIR_Ind)/$(wildcard *.csv)
+ Ind_Dependencias = $(DIR_Ind)/Brasil-Indicadores.xlsm $(DIR_Ind)/Indicadores_para_CSV.R
+
+# Base SES/Susep
+ SUSEP_Dependencias = $(DIR_SUSEP)/$(wildcard *.csv)
+
+# Indicadores
+MSBr.db: $(Ind_Alvo) $(Ind_Dependencias)
+	@echo "Atualizando os csv...";\
+	cd $(DIR_Ind);\
+	R CMD BATCH Indicadores_para_CSV.R --no-save --no-restore;\
+	cd ..;\
+	cat Scripts/BaseDeDados/MSBr-Indicadores.sql | sqlite3 -separator ';' MSBr.db
+	cat Scripts/BaseDeDados/100.Mercado.Seguros.sql | sqlite3 -separator ';' -header MSBr.db > Relatorio/tabelas/Seguros
+

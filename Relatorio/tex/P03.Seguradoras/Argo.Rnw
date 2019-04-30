@@ -1,0 +1,19 @@
+
+
+\section{Argo Seguros}
+
+\includegraphics[width=40mm,height=10mm]{ARGO}
+
+\textbf{Teste:} testando a modularizacao do LaTex.\\
+
+<<label=rnorm, fig=TRUE,echo=false, include=FALSE,width=7,height=4,prefix.string=./figuras/xx>>=
+  plot(rnorm(100))
+@
+\begin{figure}[ht]
+  \begin{minipage}{0.70\textheight}
+    \centering
+      \includegraphics[width=17cm]{./figuras/xx-rnorm}
+  \end{minipage}
+\end{figure}
+
+

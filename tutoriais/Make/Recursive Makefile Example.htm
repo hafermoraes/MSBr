@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://lackof.org/taggart/hacking/make-example/ -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+ <TITLE>Recursive Makefile Example</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<STYLE type="text/css">
+blockquote {
+	border: 1px solid #CBCBCB;
+	background-color: #EDEDFF;
+	color: black;
+	padding: 5px;
+}
+</STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.17631"></HEAD> 
+<BODY>
+<H3>Recursive Makefile Example</H3>
+<P>I wanted to come up with generic way using only make (no 
+autoconf/automake/etc) to solve the following problem:</P>
+<BLOCKQUOTE>Given a source directory with several subdirectories, have it so 
+  that running make in the top directory runs the make in all the 
+  subdirectories, potentially with dependencies so that things are built in the 
+  correct order. This should work for "<CODE>make</CODE>", "<CODE>make 
+  install</CODE>", "<CODE>make clean</CODE>", etc.</BLOCKQUOTE>
+<P>The make manual has a <A href="http://www.gnu.org/software/make/manual/make.html#Phony-Targets">good 
+description</A> of this (in the "Phony targets" section of all places. It 
+says</P>
+<BLOCKQUOTE>Another example of the usefulness of phony targets is in 
+  conjunction with recursive invocations of <CODE>make</CODE> (for more 
+  information, see <A href="http://www.gnu.org/software/make/manual/make.html#Recursion">Recursive 
+  Use of <CODE>make</CODE></A>).  In this case the makefile will often contain a 
+  variable which lists a number of subdirectories to be built.  One way to 
+  handle this is with one rule whose command is a shell loop over the 
+  subdirectories, like this: 
+<PRE class="example">     SUBDIRS = foo bar baz
+     
+     subdirs:
+             for dir in $(SUBDIRS); do \
+               $(MAKE) -C $$dir; \
+             done
+</PRE>
+  <P>There are a few problems with this method, however.  First, any error 
+  detected in a submake is not noted by this rule, so it will continue to build 
+  the rest of the directories even when one fails.  This can be overcome by 
+  adding shell commands to note the error and exit, but then it will do so even 
+  if <CODE>make</CODE> is invoked with the <CODE>-k</CODE> option, which is 
+  unfortunate.  Second, and perhaps more importantly, you cannot take advantage 
+  of <CODE>make</CODE>'s ability to build targets in parallel (see <A href="http://www.gnu.org/software/make/manual/make.html#Parallel">Parallel 
+  Execution</A>), since there is only one rule.    
+  <P>By declaring the subdirectories as phony targets (you must do this as the 
+  subdirectory obviously always exists; otherwise it won't be built) you can 
+  remove these problems: 
+<PRE class="example">     SUBDIRS = foo bar baz
+     
+     .PHONY: subdirs $(SUBDIRS)
+     
+     subdirs: $(SUBDIRS)
+     
+     $(SUBDIRS):
+             $(MAKE) -C $@
+     
+     foo: baz
+</PRE>
+  <P>Here we've also declared that the <SAMP><SPAN 
+  class="file">foo</SPAN></SAMP> subdirectory cannot be built until after the 
+  <SAMP><SPAN class="file">baz</SPAN></SAMP> subdirectory is complete; this kind 
+  of relationship declaration is particularly important when attempting parallel 
+  builds.</P></BLOCKQUOTE>
+<P>The point about not using loops and instead making the subdirs themselves 
+targets seems like a good idea and works for our "<CODE>make</CODE>" case. Well 
+what about "<CODE>make install</CODE>"? We're already using the subdir names as 
+targets for the normal "<CODE>make</CODE>", so we can't do the same trick 
+exactly, but we can invent new target names</P>
+<BLOCKQUOTE><CODE>
+<PRE>INSTALLDIRS = $(SUBDIRS:%=install-%)
+
+install: $(INSTALLDIRS)
+$(INSTALLDIRS): 
+	$(MAKE) -C $(@:install-%=%) install
+
+.PHONY: subdirs $(INSTALLDIRS)
+.PHONY: install
+</PRE></CODE></BLOCKQUOTE>
+<P>In the first line, for each directory in SUBDIRS, we create a corresponding 
+list of directories with "<CODE>install-</CODE>" prefixed (but could just as 
+easily be a list of dirs). Next we have an <CODE>install</CODE> target that 
+depends on all of them, and then we have a generic target that for each of them 
+determines the the subdir name (by stripping off the "<CODE>install-</CODE>") 
+and does a "<CODE>make install</CODE>" in that directory. Last we declare these 
+made up targets as phony.</P>
+<P>OK, so can we use this technique for other targets too? Sure, and while we're 
+at it lets make our original solution for "<CODE>make</CODE>" use 
+"<CODE>build-</CODE>" as a prefix for consistency (we are using 
+<CODE>.PHONY</CODE> for all these targets, but it's probably a good idea to have 
+the target names not correspond to any real file/dir).</P>
+<P>So here's the end result, a sample Makefile for a ficticious project that has 
+a few directories and some dependencies along with some other good ideas 
+suggested by the GNU Coding Standards.</P>
+<BLOCKQUOTE><CODE>
+<PRE># example Makefile
+#
+SHELL = /bin/sh
+INSTALL = /usr/bin/install
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = $(INSTALL) -m 644
+include Makefile.conf
+
+DIRS = dev ui utils doc
+# the sets of directories to do various things in
+BUILDDIRS = $(DIRS:%=build-%)
+INSTALLDIRS = $(DIRS:%=install-%)
+CLEANDIRS = $(DIRS:%=clean-%)
+TESTDIRS = $(DIRS:%=test-%)
+
+all: $(BUILDDIRS)
+$(DIRS): $(BUILDDIRS)
+$(BUILDDIRS):
+	$(MAKE) -C $(@:build-%=%)
+
+# the utils need the libraries in dev built first
+build-utils: build-dev
+
+install: $(INSTALLDIRS) all
+$(INSTALLDIRS):
+	$(MAKE) -C $(@:install-%=%) install
+
+test: $(TESTDIRS) all
+$(TESTDIRS): 
+	$(MAKE) -C $(@:test-%=%) test
+
+clean: $(CLEANDIRS)
+$(CLEANDIRS): 
+	$(MAKE) -C $(@:clean-%=%) clean
+
+
+.PHONY: subdirs $(DIRS)
+.PHONY: subdirs $(BUILDDIRS)
+.PHONY: subdirs $(INSTALLDIRS)
+.PHONY: subdirs $(TESTDIRS)
+.PHONY: subdirs $(CLEANDIRS)
+.PHONY: all install clean test
+</PRE></CODE></BLOCKQUOTE>
+<P>The above still seems too complicated to me for doing something that seems 
+like such a common thing to do. If you have better ways to do it or other 
+suggestions, please let me know.</P>
+<HR>
+Matt Taggart <A href="mailto:matt@lackof.org">mailto:matt@lackof.org</A><BR>
+2008-04-16 </BODY></HTML>

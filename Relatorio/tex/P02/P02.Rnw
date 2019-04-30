@@ -1,0 +1,117 @@
+\documentclass[../../relatorio.tex]{subfiles}
+\begin{document}
+
+
+<<echo=false>>=
+  load('../../../Scripts/R/P02.RData')
+  library(xtable)
+#  Seguros.VGBL.como.Previdência <- Seguros(VGBL = "Previdência")
+#  Seguros.VGBL.como.Vida        <- Seguros(VGBL = "Seguros"    )
+
+@
+
+O mercado segurador brasileiro é constituído pelos Seguros de Danos, Seguros de Pessoas, Capitalização, Previdência Complementar Aberta (todos sob supervisão da SUSEP) e pelo Seguro Saúde (sob supervisão da ANS).
+Até \Sexpr{ mes.por.extenso( susep_ref ) }, data da última atualização dos dados por parte da SUSEP, o mercado apresentou os seguintes volumes de prêmios e contribuições:
+
+Agrupamento neste Relatório (VGBL classificado como 'Previdência')
+\renewcommand\thetable{II.1}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Previdência$ev.Tabela
+                      , digits  = Seguros.VGBL.como.Previdência$ev.Dígitos
+                      , caption = "Volume de prêmios e contribuições por ano. Valores em BRL Bilhões"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list( big.mark = ".", decimal.mark = "," )
+             , hline.after      = Seguros.VGBL.como.Previdência$ev.Barras
+             , table.placement   = "H"
+            )
+@
+\renewcommand\thetable{II.1.r.dez.}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Previdência$rk.Grupos.Dez
+                      , digits  = Seguros.VGBL.como.Previdência$rk.Grupos.Dez.Dígitos
+                      , caption = "Ranking por Ramo de Negócios em dezembro do ano anterior"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list(big.mark = ".", decimal.mark = "," )
+             , size             = "\\footnotesize"
+             , hline.after      = Seguros.VGBL.como.Previdência$rk.Grupos.Dez.Barras
+             , table.placement   = "H"
+            )
+@
+\renewcommand\thetable{II.1.r.ytd.}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Previdência$rk.Grupos.YTD
+                      , digits  = Seguros.VGBL.como.Previdência$rk.Grupos.YTD.Dígitos
+                      , caption = "Ranking por Ramo de Negócios no ano atual"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list( big.mark = ".", decimal.mark = "," )
+             , size             = "\\footnotesize"
+             , hline.after      = Seguros.VGBL.como.Previdência$rk.Grupos.YTD.Barras
+             , table.placement   = "H"
+            )
+@
+\pagebreak
+
+Agrupamento Tradicional (VGBL classificado como 'Seguro de Pessoas')
+\renewcommand\thetable{II.2}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Vida$ev.Tabela
+                      , digits  = Seguros.VGBL.como.Vida$ev.Dígitos
+                      , caption = "Volume de prêmios e contribuições por ano. Valores em BRL Bilhões"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list( big.mark = ".", decimal.mark = "," )
+             , hline.after      = Seguros.VGBL.como.Vida$ev.Barras
+             , table.placement   = "H"
+            )
+@
+\renewcommand\thetable{II.2.r.dez.}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Vida$rk.Grupos.Dez
+                      , digits  = Seguros.VGBL.como.Vida$rk.Grupos.Dez.Dígitos
+                      , caption = "Ranking por Ramo de Negócios em dezembro do ano anterior"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list(big.mark = ".", decimal.mark = "," )
+             , size             = "\\footnotesize"
+             , hline.after      = Seguros.VGBL.como.Vida$rk.Grupos.Dez.Barras
+             , table.placement   = "H"
+            )
+@
+\renewcommand\thetable{II.2.r.ytd.}
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        x       = Seguros.VGBL.como.Vida$rk.Grupos.YTD
+                      , digits  = Seguros.VGBL.como.Vida$rk.Grupos.YTD.Dígitos
+                      , caption = "Ranking por Ramo de Negócios no ano atual"
+                      ,
+                     )
+             , include.rownames = FALSE
+             , format.args      = list( big.mark = ".", decimal.mark = "," )
+             , size             = "\\footnotesize"
+             , hline.after      = Seguros.VGBL.como.Vida$rk.Grupos.YTD.Barras
+             , table.placement   = "H"
+            )
+@
+\counterwithin{table}{section}
+
+\pagebreak
+\end{document}

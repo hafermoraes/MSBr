@@ -1,0 +1,84 @@
+\documentclass[../../relatorio.tex]{subfiles}
+\begin{document}
+
+<<echo=false>>=
+  library(xtable)
+  load('../../../Scripts/R/P02.RData')
+
+ #Pessoas              <- Seguros.Detalha( Segmento = "Seguro de Pessoas"     , Nível = "class3" )
+
+ #Pessoas.YTD.A        <- round( Pessoas$ev.YTD[ nrow(Pessoas$ev.YTD)    , 3 ], digits = 1 )
+ #Pessoas.YTD.Am1      <- round( Pessoas$ev.YTD[ nrow(Pessoas$ev.YTD) - 1, 3 ], digits = 1 )
+
+ #Pessoas.Perc.Mercado <- round( Pessoas$ev.Tabela[ nrow(Pessoas$ev.Tabela) - 1, ncol(Pessoas$ev.Tabela) - 1 ], digits = 1 )
+ #Pessoas.Dez.Am1      <- round( Pessoas$ev.Tabela[ nrow(Pessoas$ev.Tabela) - 2, ncol(Pessoas$ev.Tabela) - 1 ], digits = 1 )
+
+ #Pessoas.Banco.A      <- round( 100 * Pessoas$ev.Bancos[ nrow(Pessoas$ev.Bancos)    , 3 ], digits = 1 )
+ #Pessoas.Banco.Am5    <- round( 100 * Pessoas$ev.Bancos[ nrow(Pessoas$ev.Bancos) - 4, 3 ], digits = 1 )
+ #Pessoas.Banco.Am10   <- round( 100 * Pessoas$ev.Bancos[ nrow(Pessoas$ev.Bancos) - 9, 3 ], digits = 1 )
+@
+
+\section{Seguro de Pessoas}
+
+O Seguro de Pessoas tem por objetivo cobrir blabla blá...
+
+
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        Pessoas$ev.Tabela
+                      , digits  = Pessoas$ev.Dígitos
+                      , caption = "Evolução do Mercado de Seguro de Pessoas. Valores em BRL Bilhões"
+                      ,
+                     )
+             , include.rownames  = FALSE
+             , format.args       = list(big.mark=".",decimal.mark=",")
+             , hline.after       = Pessoas$ev.Barras
+            )
+@
+
+Até \Sexpr{ mes.por.extenso( susep_ref ) }, o mercado de Seguro de Pessoas totaliza BRL \Sexpr{ Pessoas.YTD.A } Bilhões (contra BRL \Sexpr{ Pessoas.YTD.Am1 } Bilhões no mesmo período do ano passado). Em dezembro do ano anterior o mercado de Seguro de Pessoas representava aproximadamente \Sexpr{ Pessoas.Perc.Mercado }\% do mercado segurador brasileiro (com BRL \Sexpr{ Pessoas.Dez.Am1 } Bilhões de prêmios).
+
+O mercado de Seguro de Pessoas é dominado cada vez mais pelas seguradoras ligadas aos bancos: \Sexpr{ Pessoas.Banco.A }\% dos prêmios até \Sexpr{ mes.por.extenso( susep_ref ) } ; há 5 anos elas detinham \Sexpr{ Pessoas.Banco.Am5 }\% e há 10 anos \Sexpr{ Pessoas.Banco.Am10 }\%.
+
+\begin{table}[!h]
+  \begin{minipage}[t]{0.49\linewidth}
+    \centering
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        Pessoas$rk.Grupos.YTD
+                      , digits = Pessoas$rk.Grupos.YTD.Dígitos
+                      ,
+                     )
+             , include.rownames = FALSE
+             , floating         = FALSE
+             , format.args      = list(big.mark=".",decimal.mark=",")
+             , hline.after      = Pessoas$rk.Grupos.YTD.Barras
+            )
+@
+    \captionof{table}{Prêmios em BRL Bilhões (\Sexpr{ format( susep_ref, format = "%Y/%m" ) })}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[t]{0.49\linewidth}
+    \centering
+<<results=tex,echo=false>>=
+print.xtable(
+               xtable(
+                        Pessoas$rk.Grupos.Dez
+                      , digits = Pessoas$rk.Grupos.Dez.Dígitos
+                      ,
+                     )
+             , include.rownames = FALSE
+             , floating         = FALSE
+             , format.args      = list(big.mark=".",decimal.mark=",")
+             , hline.after      = Pessoas$rk.Grupos.Dez.Barras
+            )
+@
+    \captionof{table}{Prêmios em BRL Bilhões (\Sexpr{ paste( as.numeric(format(susep_ref,"%Y"))-1, "/12", sep = "")   })}
+  \end{minipage}
+\end{table}
+
+\pagebreak
+
+\end{document}

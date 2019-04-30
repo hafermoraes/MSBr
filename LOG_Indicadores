@@ -1,0 +1,139 @@
+INDICADORES
+	√çndice da Bolsa de Valores
+		Baixado via R atrav√©s do pacote tseries
+	Cota√ß√µes das Moedas EUR, USD e GBP
+		Baixado via R atrav√©s do pacote quantmod
+
+	Desemprego
+		link utilizado: ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Mensal_de_Emprego/Tabelas/2015/tab177052015.xls
+		download do xls: OK
+		c·lculos no excel: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/Desemprego/pme)
+		primeiras 3 linhas:
+			 2002-03-01|PME|0.129
+			 2002-04-01|PME|0.125
+			 2002-05-01|PME|0.119
+		˙ltimas 3 linhas:
+			 2015-03-01|PME|0.062
+			 2015-04-01|PME|0.064
+			 2015-05-01|PME|0.067
+
+	DÌvida P˙blica
+		link utilizado: http://www.bcb.gov.br/ftp/notaecon/Divggp.zip
+		download do ZIP: OK
+		unzip para o arquivo excel: OK
+		c·lculos no excel: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/DÌvidaP˙blica/divida_publica)
+		primeiras 3 linhas:
+			2001-12-01|Divida_Publica_Perc_PIB|0.673
+			2002-01-01|Divida_Publica_Perc_PIB|0.683
+			2002-02-01|Divida_Publica_Perc_PIB|0.677
+		˙ltimas 3 linhas:
+			2015-03-01|Divida_Publica_Perc_PIB|0.667
+			2015-04-01|Divida_Publica_Perc_PIB|0.663
+			2015-05-01|Divida_Publica_Perc_PIB|0.668
+
+	EMBI+ Brasil (Risco Brasil)
+		link utilizado: http://www.ipeadata.gov.br/ExibeSerie.aspx?serid=40940&module=M
+		download do html: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/EMBI_Plus/embi)
+		primeiras 3 linhas:
+			2015-07-15|EMBI|306
+			2015-07-14|EMBI|297
+			2015-07-13|EMBI|296
+		˙ltimas 3 linhas:
+			1994-05-03|EMBI|1081
+			1994-05-02|EMBI|1131
+			1994-04-29|EMBI|1120
+
+	InflaÁ„o oficial (IPCA-IBGE, fonte: IPEADATA)
+		link utilizado: http://www.ipeadata.gov.br/ExibeSerie.aspx?serid=38513&module=M
+		download do html: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/InflaÁ„o/ipca)
+		primeiras 3 linhas:
+			1980-12-01|IPCA|0.9928
+			1981-01-01|IPCA|0.9969
+			1981-02-01|IPCA|1.0309
+		˙ltimas 3 linhas:
+			2015-04-01|IPCA|0.0817
+			2015-05-01|IPCA|0.0847
+			2015-06-01|IPCA|0.0888
+
+	Juros (Taxa SELIC)
+		link utilizado: https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarSeries&series=1178
+		download do html: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/Juros/selic)
+		primeiras 3 linhas:
+			1986-06-04|SELIC|0.178
+			1986-06-05|SELIC|0.185
+			1986-06-06|SELIC|0.183
+		˙ltimas 3 linhas:
+			2015-07-14|SELIC|0.1365
+			2015-07-15|SELIC|0.1365
+			2015-07-16|SELIC|0.1365
+
+	PIB
+		link utilizado: http://www.ibge.gov.br/home/estatistica/indicadores/pib/pib-vol-val_201501_8.shtm
+		download do html: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/PIB/pib)
+		primeiras 3 linhas:
+			1996-01-01|PIB|189734000000
+			1996-03-01|PIB|205463000000
+			1996-09-01|PIB|222363000000
+		˙ltimas 3 linhas:
+			2014-09-01|PIB|1397513000000
+			2014-12-01|PIB|1446066000000
+			2015-01-01|PIB|1408009000000
+
+	Ratings
+		link utilizado: http://countryeconomy.com/ratings/brazil
+		download do html: OK
+		Rating da Moody's: OK
+		Rating da S&P: OK
+		Rating da Fitch: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/Rating/ratings)
+		primeiras 3 linhas:
+			2014-09-09|Rating_Moody's|Baa2 (Negative)
+			2013-10-02|Rating_Moody's|Baa2 (Stable)
+			2011-06-20|Rating_Moody's|Baa2
+		˙ltimas 3 linhas:
+			1997-12-03|Rating_Fitch|B+
+			1995-10-26|Rating_Fitch|B+
+			1994-12-01|Rating_Fitch|B+
+
+	Reservas Internacionais em USD
+		link utilizado: https://www3.bcb.gov.br/sgspub/consultarvalores/consultarValoresSeries.do?method=consultarSeries&series=13621
+		download do html: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/ReservasUSD/reservas_USD)
+		primeiras 3 linhas:
+			1998-09-01|Reservas_Intl_USD|65969000000
+			1998-09-02|Reservas_Intl_USD|63083000000
+			1998-09-03|Reservas_Intl_USD|61984000000
+		˙ltimas 3 linhas:
+			2015-07-13|Reservas_Intl_USD|368186000000
+			2015-07-14|Reservas_Intl_USD|368459000000
+			2015-07-15|Reservas_Intl_USD|367966000000
+
+	SUSEP - Mercado Supervisionado
+		Corretores_de_Resseguro: OK
+		Resseguradora_Eventual: OK
+		CapitalizaÁ„o: OK
+		Autorreguladoras: OK
+		PrevidÍncia: OK
+		Resseguradora_Local: OK
+		Seguradoras: OK
+		Resseguradora_Admitida: OK
+		arquivo para importaÁ„o no SQLite: OK (Indicadores/SUSEP/Mercado_Supervisionado)
+		primeiras 3 linhas:
+			Nome|CNPJ|CÛdigo.FIP|EndereÁo|Cidade|Cep|DDD|Telefone|Fax|Data.Autorizacao|Tipo.Empresa
+			AD CORRETORA DE RESSEGUROS LTDA|09.674.690/0001-39|77747|AVENIDA BRIGADEIRO FARIA LIMA 3015 - 11O. ANDAR/ CONJ. 112  - JARDIM PAULISTANO |S√O PAULO|01452000|11|30745000|30745000|14/11/2008|Corretores_de_Resseguro
+			AON BENFIELD BRASIL CORRETORA DE RESSEGUROS LTDA|02.757.429/0001-53|78743|TE”FILO OTONI, N∫ 15 - 10∫ ANDAR - CENTRO |RIO DE JANEIRO|20090080|11|47005058|2223-8922|18/03/2008|Corretores_de_Resseguro
+		˙ltimas 3 linhas:
+			ZURICH SANTANDER BRASIL SEGUROS S.A.|06.136.920/0001-18|06564|AV. PRES. JUSCELINO KUBITSCHEK, 2041/ 2235 - BL. A -22∫ANDAR - VILA OLIMPIA |S√O PAULO|04543001|11|5538-7863|5538-7863|16/12/2003|Seguradoras
+			ZURICH VIDA E PREVID NCIA S.A.|01.206.480/0001-04|06157|AVENIDA ROBERTO MARINHO, 85, 20∫ ANDAR - BROOKLIN NOVO  |S√O PAULO|04576010|11|2313-8598|3219-3820|13/03/1996|Seguradoras
+			ACE TEMPEST REINSURANCE LTD.|10.335.860/0001-30|40851|AV. PAULISTA, 1294 - 16∫ ANDAR - BELA VISTA |S√O PAULO|01310915|11|4504.4350|4504.4396|11/12/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |10.853.223/0001-55|40207|PRAIA DO FLAMENGO, 154, SALA 101 - PARTE - FLAMENGO |RIO DE JANEIRO|22210-906|21|3850-5952|3235-6552|31/07/2009|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.489.278/0001-98|49760|RUA GOMES DE CARVALHO, 1306 12∫ ANDAR - VILA OLÕMPIA |S√O PAULO|04547005|11|08007266130|38092111|23/10/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |16.809.990/0001-43|49131|PRAIA DE BOTAFOGO 501, TORRE II, 2. ANDAR - BOTAFOGO |RIO DE JANEIRO|22250040|21|2546-9943|2586-6002|03/04/2013|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |11.459.147/0001-60|45926|PRAIA DE BOTAFOGO 501, BLOCO II, 2∫ ANDAR - BOTAFOGO |RIO DE JANEIRO|22250-040|21|2546-9943|2586-6002|02/06/2010|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |12.575.275/0001-32|42684|AVENIDA NA«’ES UNIDAS, 12.399 CJ 140 E 141 - BROOKLIN PAULISTA |S√O PAULO|04578-000|11|30565530|30565530|31/03/2014|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |11.499.800/0001-15|46507|ALAMEDA SANTOS, 2326 - CJ 95-97 - CERQUEIRA CESAR |SAO PAULO|01418200|55|39573000|39573005|03/03/2011|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |17.255.520/0001-48|47848|RUA OLIMPIADAS, 242 - 7∫ ANDAR - VILA OLIMPIA |S√O PAULO|04551-000|11|3848-8622|3848-8633|19/07/2013|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |13.380.383/0001-12|47708|AV. ENG LUIS CARLOS BERRINI,1511 12 ANDAR CJ122 - BROOKLIN NOVO |SAO PAULO|04575-011|11|36275012|36275001|17/05/2011|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |10.223.555/0001-56|44920|AV. NA«’ES UNIDAS 12.399, 7∫ ANDAR, CJ 75A - BROOKLIN PAULISTA |S√O PAULO|04578000|11|51118292|NA|18/12/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |10.916.851/0001-32|41416|AV. PRES. JUSCELINO KUBITSCHEK, 360 14 ANDAR - VILA NOVA CONCEI«√O |S√O PAULO|04543000|11|30773900|31672873|15/09/2009|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.532.974/0001-90|46761|AV. MARIA COELHO AGUIAR, 215 - BLOCO F - 4∫ ANDAR (PARTE) - JARDIM S√O LUIS |S√O PAULO|05805-000|11|3741-3497|3741-5311|29/12/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |17.944.714/0001-50|44938|AVENIDA ROQUE PETRONI JUNIOR, 999 - MORUMBI OFFICE TOWER, ANDAR 13 - JARDIM DAS ACACIAS |S√O PAULO|04707000|11|47003699|47003699|10/10/2014|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |17.944.715/0001-03|47406|AVENIDA ROQUE PETRONI JUNIOR, 999 - MORUMBI OFFICE TOWER; ANDAR 13 - JARDIM DAS ACACIAS |S√O PAULO|04707000|11|4700.3699| 4700.3699|25/09/2014|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |15.663.621/0001-22|45896|LAURO MULLER, 116, SALA 2402 - BOTAFOGO |RIO DE JANEIRO|22290-160|21|30379764|000000000000000|20/08/2013|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |02.030.942/0001-48|48879|AV. PAULISTA, 1636, 3∫ ANDAR, CONJUNTO 307, ED PAULISTA CORP - BELA VISTRA |SAO PAULO|01310-200|11|5186-2500|5186-2501|18/12/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.486.274/0001-07|41491|PRACA FLORIANO, 19 SALA 1701 E 1702 - CENTRO |RIO DE JANEIRO|2031050|21|22179501|22179515|16/07/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.547.043/0001-05|47082|AV IBIRAPUERA, 730 SALA 1  - INDIANOPOLIS |S√O PAULO|04028000|11|55081356|55051511|25/04/2011|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |08.712.487/0001-47|42871|RUA DR. GERALDO DE CAMPOS MOREIRA, 110, 13∫ ANDAR, PARTE C - CIDADE MON«’ES |S√O PAULO|04571020|11|26634150|26633027|07/10/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.390.549/0001-04|42463|AV ALMIRANTE BARROSO, 52 - SALA 2401 PARTE - CENTRO |RIO DE JANEIRO|20031918|21|3266-1900|3266-1900|15/04/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.723.617/0001-59|40215|RUA OLIMPIADAS, 242 - 5 ANDAR - CONJ. 52 PARTE - VILA OLIMPIA |SAO PAULO|04551-000|11|30401900|30401940|14/04/2010|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.598.097/0001-08|47724|ALAMEDA SANTOS 415 - 5∫ ANDAR - CERQUEIRA CESAR |S√O PAULO|01419000|11|31775801|32896997|15/10/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |11.337.192/0001-42|41432|AV. DAS NA«’ES UNIDAS 12.399 - CJ 107 A - BROOKLIN NOVO |S√O PAULO|04578-000|11|35126923|35126924|17/03/2010|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.345.630/0001-72|44814|AVENIDA PAULISTA 1636 4 ANDAR CONJ 408 - BELA VISTA |S√O PAULO|01310200|11|32668034||10/07/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |10.274.217/0001-43|45004|AVENIDA DAS NA«’ES UNIDAS, 12995 - 3∞ ANDAR  - BROOKLIN NOVO |S√O PAULO|04578000|11|3556-7086|5505-2115|15/12/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.577.213/0001-55|44661|RUA LUIGI GALVANI, 70 - CONJ 121 (PARTE) - CIDADE MON«’ES |S√O PAULO|04575-020|11|55011511|55011527|19/06/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.486.271/0001-73|41629|AVENIDA PAISAGISTA JOSE SILVA DE AZEVEDO NETO, 200, BLOCO 4, SALA 404 - BARRA DA TIJUCA |RIO DE JANEIRO|22775056|21|36139107|37367004|30/05/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |20.869.397/0001-60|43419|AVENIDA PAULISTA, N∫ 854 - 10∫ ANDAR - BELA VISTA |S√O PAULO|01310100|11|3074-9600|3074-9600|16/01/2015|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.482.728/0001-71|48747|AVENIDA PAULISTA, 500 - 5∫ ANDAR CONJ 52 - BELA VISTA |S√O PAULO|01310000|11|30738000|30738001|23/05/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.723.273/0001-88|42790|AV. PAULISTA, 500 - 5∫ ANDAR - CONJ. 51 - BELA VISTA |S√O PAULO|01310000|11|30738000|30738001|23/05/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.711.001/0001-68|47741|RUA SAMPAIO VIANA, 44 5∫ ANDAR - PARAISO |S√O PAULO|04004000|11|3054-7433|3054-7373|10/03/2011|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |11.987.926/0001-39|40096|AV. DAS NA«’ES UNIDAS, 12551; 9∫ ANDAR - BROOKLIN PAULISTA |SAO PAULO|04578-000|11|34431715|34437474|08/10/2010|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |09.539.939/0001-01|42951|TRAVESSA BELAS ARTES, 15 - 7 ANDAR - CENTRO |RIO DE JANEIRO|20060000|21|3722-2682|3722-2682|17/11/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.708.742/0001-90|48259|RUA DA CANDELARIA, 65 - SALAS 2101 E 2102 - CENTRO |RIO DE JANEIRO|20091020|21|21272700|21272707|28/04/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.712.527/0001-62|43290|AV. BRIGADEIRO FARIA LIMA, 4300 - 4∫ ANDAR - ITAIM BIBI |S√O PAULO |04538-132|11|35139253|35139244|10/06/2008|Resseguradora_AdmitidaE-mail da ResoluÁ„o 241/11: |05.617.056/0001-03|48275|AV JORNALISTA ROBERTO MARINHO 85 21∫ANDAR - BROOKLIN NOVO |SAO PAULO|04576010|55|2313-8500|2313-4838|20/03/2009|Resseguradora_Admitida
+	 Gr√°ficos atualizados no diret√≥rio Relatorio/img: ok
+	 Importa√ß√£o dos Indicadores na base SQLIte MSBr.db: ok	√çndice da Bolsa de Valores
+		Baixado via R atrav√©s do pacote tseries
+	√çndice da Bolsa de Valores
+		Baixado via R atrav√©s do pacote tseries

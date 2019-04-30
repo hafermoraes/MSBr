@@ -1,0 +1,9 @@
+Base SES/SUSEP
+	Base SES (Sistema de Estat�sticas da SUSEP)
+		link utilizado: http://www2.susep.gov.br/redarq.asp?arq=BaseCompleta%2ezip
+		download do ZIP: OK
+		unzip dos CSVs: OK
+	 Prepara CSVs para importar na base SQLIte...
+	 Substitui virgula (,) pelo ponto (.) em cada arquivo
+	 Troca de nome dos arquivos para minusculas somente
+	 Importação dos CSVs para na base SQLIte MSBr.db: ok

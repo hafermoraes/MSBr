@@ -1,0 +1,63 @@
+\documentclass[a4paper,12pt]{article}
+
+% Configuracao do Latex
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+
+\usepackage{booktabs,caption,subfigure,float}
+
+\usepackage[hmargin=1.5cm, vmargin=2cm]{geometry}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} { ../img/ } {../../img/} }
+
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+
+\definecolor{lightgray}{gray}{0.95}
+\let\oldtabular\tabular
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}{\rowcolors{2}{white}{lightgray}\oldtabular}{\endoldtabular}
+
+
+%\pagecolor{Blue}
+
+\begin{document}
+\title{Mercado Segurador Brasileiro}
+\author{Rafael Rodrigues de Moraes}
+\maketitle
+
+\pagebreak
+
+\part{Contexto Macro-Econômico}
+  \subfile{tex/P01/P01.tex}
+    \subfile{tex/P01.Cambio/P01.Cambio.tex}
+    \subfile{tex/P01.Desemprego/P01.Desemprego.tex}
+    \subfile{tex/P01.DividaPublica/P01.DividaPublica.tex}
+    \subfile{tex/P01.EMBI/P01.EMBI.tex}
+    \subfile{tex/P01.IBovespa/P01.IBovespa.tex}
+    \subfile{tex/P01.Inflacao/P01.Inflacao.tex}
+    \subfile{tex/P01.Juros/P01.Juros.tex}
+    \subfile{tex/P01.PIB/P01.PIB.tex}
+    \subfile{tex/P01.ReservasUSD/P01.ReservasUSD.tex}
+
+\part{Mercado de Seguros, Capitalização e Previdência}
+  \subfile{tex/P02/P02.tex}
+    \subfile{tex/P02.Capitalizacao/P02.Capitalizacao.tex}
+    \subfile{tex/P02.Previdencia/P02.Previdencia.tex}
+    \subfile{tex/P02.Danos/P02.Danos.tex}
+    \subfile{tex/P02.Pessoas/P02.Pessoas.tex}
+    \subfile{tex/P02.Saude/P02.Saude.tex}
+
+\pagebreak
+\part{Seguradoras}
+\pagebreak
+  %\SweaveInput{./tex/Seguradoras/Ace.Rnw}
+  %\SweaveInput{./tex/Seguradoras/Argo.Rnw}
+
+\end{document}

@@ -1,0 +1,11 @@
+
+
+\section{Ace Seguradora}
+
+\includegraphics[width=40mm,height=10mm]{ACE}
+
+\textbf{Teste:} testando a modularizacão do LaTex.\\
+
+<<>>=
+str(tabela_02)
+@

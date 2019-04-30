@@ -1,0 +1,78 @@
+Base ANS
+
+	Execução do script BaseANS/perl/ANS.Baixa_CSVs.pl...
+	ANS - Receitas, Despesas Administrativas e Despesas Assistenciais
+		Inclusão da linha com o título no arquivo BaseANS/ANS_Mercado_Supervisionado: ok
+		Acesso ao site http://www.ans.gov.br/anstabnet/cgi-bin/dh?dados/tabnet_rc.def:	ok
+		Cooperativa Odontológica
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Medicina de Grupo
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Autogestão
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Filantropia
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Odontologia de Grupo
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Cooperativa Médica
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+		Seguradora Especializada em Saúde
+			Receita
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Administrativa
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+			Desp.Assistencial
+				Cópia do original do site ANS na pasta BaseANS/fonte/:		ok
+				Inclusão da tabela tratada ANS_Mercado_Supervisionado:	ok
+	 Preparação dos  CSVs para importar na base SQLIte: ok
+	 Importação dos CSVs para na base SQLIte MSBr.db: ok

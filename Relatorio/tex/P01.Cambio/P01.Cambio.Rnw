@@ -1,0 +1,44 @@
+\documentclass[../../relatorio.tex]{subfiles}
+\begin{document}
+
+\pagebreak
+\subsection{Câmbio}
+
+<<echo=false>>=
+# Fonte dos dados de câmbio
+fonte <- '../../../Indicadores/Câmbio/cambio'
+
+# Importação da série histórica para a variável 'dados'
+dados <- read.table(
+                    file       = fonte,
+                    sep        = '|',
+                    header     = TRUE,
+                    colClasses = c("Date", "character", "numeric")
+                   )
+
+# Cotação do dia mais recente
+names(dados) <- c("Data","Tipo","Cambio")
+hoje <- subset( dados, Data == max(Data) )
+
+@
+
+Abaixo a evolução das taxas de câmbio\footnote{\textbf{Fonte:} http://www.oanda.com} do Dólar Americano (USD), do Euro (EUR) e da Libra Esterlina (GBP).
+
+Cotações atuais em \Sexpr{format.Date(hoje$Data,format="%d/%m/%Y")}:
+
+\begin{itemize}
+  \item EUR 1 = BRL \Sexpr{ subset( hoje, Tipo == 'EUR/BRL')$Cambio }
+  \item USD 1 = BRL \Sexpr{ subset( hoje, Tipo == 'USD/BRL')$Cambio }
+  \item GBP 1 = BRL \Sexpr{ subset( hoje, Tipo == 'GBP/BRL')$Cambio }
+\end{itemize}
+
+\begin{figure}[ht]
+  \begin{minipage}{0.70\textheight}
+    \centering
+      \includegraphics[width=17cm]{cambio.pdf}
+  \end{minipage}
+\end{figure}
+
+\pagebreak
+
+\end{document}

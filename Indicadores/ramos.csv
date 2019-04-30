@@ -1,0 +1,161 @@
+fonte|coramo|noramo|ativo|class1|class1a|class2|class3|class4
+Saúde|Saúde|Saúde|ativo|Seguro Saúde|Seguro Saúde|Seguro Saúde|Seguro Saúde|
+PGBL|PGBL|PGBL|ativo|Previdência (EAPC)|Previdência (EAPC)|PGBL|PGBL|
+Previdência Tradicional|PrevTrad|Previdência Tradicional|ativo|Previdência (EAPC)|Previdência (EAPC)|Previdência Tradicional|Previdência Tradicional|
+Capitalização|Cap|Capitalização|ativo|Capitalização|Capitalização|Capitalização|Capitalização|
+Resseguros|01|01 - Patrimonial|ativo|Seguro de Danos|Seguro de Danos|Patrimonial||
+Resseguros|02|02 - Riscos Especiais|ativo|Seguro de Danos|Seguro de Danos|Riscos Especiais||
+Resseguros|03|03 - Responsabilidades|ativo|Seguro de Danos|Seguro de Danos|Responsabilidades||
+Resseguros|04|04 - Cascos|ativo|Seguro de Danos|Seguro de Danos|Cascos||
+Resseguros|05|05 - Automóvel|ativo|Seguro de Danos|Seguro de Danos|Automóvel||
+Resseguros|06|06 - Transportes|ativo|Seguro de Danos|Seguro de Danos|Transportes||
+Resseguros|07|07 - Riscos Financeiros|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros||
+Resseguros|08|08 - Crédito|ativo|Seguro de Danos|Seguro de Danos|Crédito||
+Resseguros|09|09 - Pessoas Coletivo|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo||
+Resseguros|10|10 - Habitacional|ativo|Seguro de Danos|Seguro de Danos|Habitacional||
+Resseguros|11|11 - RURAL|ativo|Seguro de Danos|Seguro de Danos|Rural||
+Resseguros|12|12 - Outros|ativo|Seguro de Danos|Seguro de Danos|Outros||
+Resseguros|13|13- Pessoas Individual|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual||
+Resseguros|14|14 - Marítimos|ativo|Seguro de Danos|Seguro de Danos|Marítimos||
+Resseguros|16|16 - Microsseguros|ativo|Seguro de Danos|Seguro de Danos|Microsseguros||
+Resseguros|15|15 - Aeronáuticos|ativo|Seguro de Danos|Seguro de Danos|Aeronáuticos||
+Seguros|0111|0111 - INCÊNDIO TRADICIONAL|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Incêndio|
+Seguros|0112|0112 - Assistência - Bens em Geral|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Assistência|
+Seguros|0113|0113 - VIDROS|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Vidros|
+Seguros|0114|0114 - Compreensivo Residencial|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Compreensivo Residencial|
+Seguros|0115|0115 - ROUBO|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Roubo|
+Seguros|0116|0116 - Compreensivo Condomínio|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Compreensivo Condomínio|
+Seguros|0117|0117 - TUMULTOS|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Tumultos|
+Seguros|0118|0118 - Compreensivo Empresarial|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Compreensivo Empresarial|
+Seguros|0141|0141 - LUCROS CESSANTES|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Lucros Cessantes|
+Seguros|0142|0142 - LUCROS CESSANTES COBERTURA SIMPLES|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Lucros Cessantes|
+Seguros|0143|0143 - FIDELIDADE|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Fidelidade|
+Seguros|0167|0167 - RISCOS DE ENGENHARIA|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Riscos de Engenharia|
+Seguros|0171|0171 - RISCOS DIVERSOS|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Riscos Diversos|
+Seguros|0173|0173 - GLOBAL DE BANCOS|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Global de Bancos|
+Seguros|0176|0176 - RISCOS DIVERSOS - PLANOS CONJUGADOS|run-off|Seguro de Danos|Seguro de Danos|Patrimonial|Riscos Diversos|
+Seguros|0195|0195 - Garantia Est./Ext.Gar-Bens em Geral|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Garantia Extendida|
+Seguros|0196|0196 - Riscos Nomeados e Operacionais|ativo|Seguro de Danos|Seguro de Danos|Patrimonial|Riscos Nomeados e Operacionais|
+Seguros|0234|0234 - RISCOS DE PETRÓLEO|ativo|Seguro de Danos|Seguro de Danos|Riscos Especiais|Petróleo|
+Seguros|0272|0272 - RISCOS NUCLEARES|ativo|Seguro de Danos|Seguro de Danos|Riscos Especiais|Nucleares|
+Seguros|0274|0274 - SATÉLITES|ativo|Seguro de Danos|Seguro de Danos|Riscos Especiais|Satélite|
+Seguros|0310|0310 - R.C.Administradores e Diretores-D&O|ativo|Seguro de Danos|Seguro de Danos|Responsabilidades|RC Administradores e Diretores|
+Seguros|0313|0313 - R. C. Riscos Ambientais|ativo|Seguro de Danos|Seguro de Danos|Responsabilidades|RC Ambiental|
+Seguros|0351|0351 - R. C. Geral|ativo|Seguro de Danos|Seguro de Danos|Responsabilidades|RC Geral|
+Seguros|0378|0378 - R. C.  Profissional|ativo|Seguro de Danos|Seguro de Danos|Responsabilidades|RC Profissional|
+Seguros|0433|0433 -  Marítimos|run-off|Seguro de Danos|Seguro de Danos|Cascos|Marítimos|
+Seguros|0435|0435 - AERONÁUTICOS|run-off|Seguro de Danos|Seguro de Danos|Cascos|Aeronáuticos|
+Seguros|0437|0437 - RESPONSABILIDADE CIVIL HANGAR|run-off|Seguro de Danos|Seguro de Danos|Cascos|RC Hangar|
+Seguros|0457|0457 - D. P. E. M.|run-off|Seguro de Danos|Seguro de Danos|Cascos|DPEM|
+Seguros|0484|0484 - AERONÁUTICOS - BILHETE|run-off|Seguro de Danos|Seguro de Danos|Cascos|Aeronáuticos – Bilhete|
+Seguros|0520|0520 - Acidentes Pessoais Passageiros-APP|ativo|Seguro de Pessoas|Seguro de Pessoas|Automóvel|Acidentes Pessoais|AP Passageiros
+Seguros|0523|0523 - RC T. ROD. INTEREST. E INTERNAC.|run-off|Seguro de Danos|Seguro de Danos|Automóvel|RC Transportador|
+Seguros|0524|0524 - Garantia Est./ Exten. Garantia–Auto|ativo|Seguro de Danos|Seguro de Danos|Automóvel|Garantia Extendida|
+Seguros|0525|0525 - Carta Verde|ativo|Seguro de Danos|Seguro de Danos|Automóvel|Carta Verde|
+Seguros|0526|0526 - Seguro Popular de Automóvel Usado|ativo|Seguro de Danos|Seguro de Danos|Automóvel|Seguro Popular Automóvel Usado|
+Seguros|0531|0531 - Automóvel - Casco|ativo|Seguro de Danos|Seguro de Danos|Automóvel|Casco|
+Seguros|0542|0542 - Assistência e Outras Cobert. - Auto|ativo|Seguro de Danos|Seguro de Danos|Automóvel|Assistência|
+Seguros|0544|0544 - R.C.T.Viagem Intern-Pes Trans ou ñ|run-off|Seguro de Danos|Seguro de Danos|Automóvel|RC Viagem|
+Seguros|0553|0553 - R. C. Facultativa Veículos - RCFV|ativo|Seguro de Danos|Seguro de Danos|Automóvel|RC Facultativa Veículos|
+Seguros|0583|0583 - DPVAT EXTINTO|run-off|Seguro de Danos|Seguro de Danos|Automóvel|DPVAT|
+Seguros|0588|0588 - DPVAT|ativo|Seguro de Danos|Seguro de Danos|Automóvel|DPVAT|
+Seguros|0589|0589 - DPVAT RUN OFF|run-off|Seguro de Danos|Seguro de Danos|Automóvel|DPVAT|
+Seguros|0621|0621 - TRANSPORTE NACIONAL|ativo|Seguro de Danos|Seguro de Danos|Transportes|Nacional|
+Seguros|0622|0622 - TRANSPORTE INTERNACIONAL|ativo|Seguro de Danos|Seguro de Danos|Transportes|Internacional|
+Seguros|0623|0623 - R.C.T.Rod.Inter.e Intern.-RC Ônibus|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Ônibus|
+Seguros|0627|0627 - Resp. Civil do Transp. Intermodal|run-off|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Intermodal|
+Seguros|0628|0628 - R. C. Facult.Veículos - RCFV Ônibus|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Facultativa Ônibus|
+Seguros|0632|0632 - R.C.Trans.Carga Viag.Int.-RCTR-VI-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Carga|
+Seguros|0638|0638 - R.C.Trans. Ferroviário Carga–RCTF-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Ferroviário|
+Seguros|0644|0644 - R.C. Viag.Int. Pessoas - Carta Azul|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Viagem Internacional|
+Seguros|0652|0652 - R. C. Trans. Aéreo Carga - RCTA-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Aéreo Carga|
+Seguros|0654|0654 - R.C. Trans. Rodoviário Carga–RCTR-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Rodoviário Carga|
+Seguros|0655|0655 - R.C. Trans. Desvio de Carga–RCF-DC|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Desvio de Carga|
+Seguros|0656|0656 - R.C. Trans. Aquaviário Carga–RCA-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Aquaviário|
+Seguros|0658|0658 - R.C.Operador Transp. Multi.-RCOTM-C|ativo|Seguro de Danos|Seguro de Danos|Transportes|RC Transporte Multimodal|
+Seguros|0739|0739 - Garantia Financeira|run-off|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0740|0740 - Garantia de Obrigações Privadas|run-off|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0743|0743 - Stop Loss|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Stop Loss|
+Seguros|0745|0745 - Garantia de Obrigações Públicas|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0746|0746 - FIANÇA LOCATÍCIA|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Fianca Locatícia|
+Seguros|0747|0747 - Garantia de Concessões Públicas|run-off|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Outros|
+Seguros|0748|0748 - CRÉDITO INTERNO|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Crédito|
+Seguros|0749|0749 - CRÉDITO A EXPORTAÇÃO|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Crédito|
+Seguros|0750|0750 - Garantia Judicial|run-off|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0775|0775 - Garantia Segurado - Setor Público|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0776|0776 - Garantia Segurado - Setor Privado|ativo|Seguro de Danos|Seguro de Danos|Riscos Financeiros|Garantia|
+Seguros|0819|0819 - Crédito à Exp. Risco Comercial|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0848|0848 - CRÉDITO INTERNO|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0849|0849 - CRÉDITO A EXPORTAÇÃO|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0859|0859 - Crédito à Exportação Risco Político|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0860|0860 - Crédito Doméstico Risco Comercial|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0870|0870 - Crédito Doméstico Risco P.Física|run-off|Seguro de Danos|Seguro de Danos|Crédito|Crédito|
+Seguros|0929|0929  - Auxílio Funeral|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Auxílio Funeral|Coletivo
+Seguros|0936|0936 - Perda Certif. Habilit. de Vôo-PCHV|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|PCHV|Coletivo
+Seguros|0949|0949 - CRÉDITO A EXPORTAÇÃO|run-off|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Outros|
+Seguros|0969|0969 -  Viagem|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Viagem|Coletivo
+Seguros|0977|0977 - Prestamista (exceto Habit e Rural)|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Prestamista|Coletivo
+Seguros|0980|0980 -  Educacional|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Educacional|Coletivo
+Seguros|0981|0981 - ACIDENTES PESSOAIS - INDIVIDUAL|run-off|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Acidentes Pessoais|AP Individual
+Seguros|0982|0982 - Acidentes Pessoais|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Acidentes Pessoais|AP Coletivo
+Seguros|0983|0983  - Dotal Misto|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Vida Individual|Dotal Misto
+Seguros|0984|0984  - Doenças Graves ou Doença Terminal|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Doenças Graves|Coletivo
+Seguros|0986|0986  - Dotal Puro|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Vida Individual|Dotal Puro
+Seguros|0987|0987  - Desemprego/Perda de Renda|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Desemprego|Coletivo
+Seguros|0990|0990 -  Eventos Aleatórios|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|DIT / DIH|Coletivo
+Seguros|0991|0991 -  Vida|run-off|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Vida Individual|Vida Individual
+Seguros|0992|0992 - VGBL/VAGP/VRGP/VRSA/PRI  individual|run-off|Previdência (EAPC)|Seguro de Pessoas|VGBL|VGBL|Individual
+Seguros|0993|0993 - VIDA EM GRUPO|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Vida Grupo|
+Seguros|0994|0994 - VGBL/VAGP/VRGP/VRSA/VRI|ativo|Previdência (EAPC)|Seguro de Pessoas|VGBL|VGBL|Coletivo
+Seguros|0997|0997 - VG/APC|run-off|Seguro de Pessoas|Seguro de Pessoas|Pessoas Coletivo|Vida Grupo|
+Seguros|1061|1061 - Seg.Habit.Apól. Merc. - Prestamista|ativo|Seguro de Pessoas|Seguro de Pessoas|Habitacional|Prestamista|Habitacional (MIP)
+Seguros|1065|1065 - Seg.Habit.Apól.Merc.-Demais Cobert.|ativo|Seguro de Danos|Seguro de Danos|Habitacional|Demais Coberturas|
+Seguros|1066|1066 - Seg.Habit.Sist.Financ. da Habitação|ativo|Seguro de Danos|Seguro de Danos|Habitacional|SFH|
+Seguros|1068|1068 - HABITACIONAL - FORA DO SFH|run-off|Seguro de Danos|Seguro de Danos|Habitacional|Outros|
+Seguros|1101|1101 - Seguro Agrícola sem cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Agrícola|
+Seguros|1102|1102 - Seguro Agrícola com cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Agrícola|
+Seguros|1103|1103 - Seguro Pecuário sem cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Pecuário|
+Seguros|1104|1104 - Seguro Pecuário com cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Pecuário|
+Seguros|1105|1105 - Seguro Aquícola sem cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Aquícola|
+Seguros|1106|1106 - Seguro Aquícola com cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Aquícola|
+Seguros|1107|1107 - Seguro Florestas sem cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Florestas|
+Seguros|1108|1108 - Seguro Florestas com cob. do FESR|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Florestas|
+Seguros|1109|1109 - Seguro da Cédula do Produto Rural|ativo|Seguro de Danos|Seguro de Danos|Rural|Cédula Produto Rural|
+Seguros|1128|1128 - PECUÁRIO|run-off|Seguro de Danos|Seguro de Danos|Rural|Seguro Pecuário|
+Seguros|1129|1129 - AQUÍCOLA|run-off|Seguro de Danos|Seguro de Danos|Rural|Seguro Aquícola|
+Seguros|1130|1130 - Seguro Benf. e Prod. Agropecuários|ativo|Seguro de Danos|Seguro de Danos|Rural|Benef. e Prod. Agropecuários|
+Seguros|1161|1161 - AGRÍCOLA|run-off|Seguro de Danos|Seguro de Danos|Rural|Seguro Agrícola|
+Seguros|1162|1162 - Penhor Rural|ativo|Seguro de Danos|Seguro de Danos|Rural|Penhor Rural|
+Seguros|1163|1163 - Penhor Rural Instit. Fin. Pub.|run-off|Seguro de Danos|Seguro de Danos|Rural|Penhor Rural|
+Seguros|1164|1164 - Seguros Animais|ativo|Seguro de Danos|Seguro de Danos|Rural|Seguro Animais|
+Seguros|1165|1165 - COMPREENSIVO DE FLORESTAS|run-off|Seguro de Danos|Seguro de Danos|Rural|Compreensivo Florestas|
+Seguros|1198|1198 - Seguro de Vida do Produtor Rural|ativo|Seguro de Pessoas|Seguro de Pessoas|Rural|Prestamista|Seguro Vida Produtor Rural
+Seguros|1279|1279 - Seguros no Exterior|ativo|Seguro de Danos|Seguro de Danos|Outros|Seguros no Exterior|
+Seguros|1285|1285 - Saúde - Ressegurador Local|ativo|Seguro de Danos|Seguro de Danos|Outros|Saúde|
+Seguros|1286|1286 - SAÚDE INDIVIDUAL|run-off|Seguro de Danos|Seguro de Danos|Outros|Saúde|
+Seguros|1287|1287 - SAÚDE GRUPAL|run-off|Seguro de Danos|Seguro de Danos|Outros|Saúde|
+Seguros|1299|1299 - SUCURSAIS NO EXTERIOR|ativo|Seguro de Danos|Seguro de Danos|Outros|Sucursais no Exterior|
+Seguros|1329|1329 - Auxílio Funeral|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Auxílio Funeral|Individual
+Seguros|1336|1336 - Perda Certif. Habilit. de Vôo-PCHV|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|PCHV|Individual
+Seguros|1369|1369 - Viagem|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Viagem|Individual
+Seguros|1377|1377 - Prestamista (exceto Habit. E Rural)|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Prestamista|Individual
+Seguros|1380|1380 - Educacional|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Educacional|Individual
+Seguros|1381|1381 - Acidentes Pessoais|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Acidentes Pessoais|AP Individual
+Seguros|1383|1383 - Dotal Misto|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Vida Individual|Dotal Misto
+Seguros|1384|1384 - Doenças Graves ou Doença Terminal|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Doenças Graves|Individual
+Seguros|1386|1386 - Dotal Puro|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Vida Individual|Dotal Puro
+Seguros|1387|1387 - Desemprego/Perda de Renda|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Desemprego|Individual
+Seguros|1390|1390 - Eventos Aleatórios|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|DIT / DIH|Individual
+Seguros|1391|1391 - Vida|ativo|Seguro de Pessoas|Seguro de Pessoas|Pessoas Individual|Vida Individual|Vida Individual
+Seguros|1392|1392 - VGBL/VAGP/VRGP/VRSA/VRI|ativo|Previdência (EAPC)|Seguro de Pessoas|VGBL|VGBL|Individual
+Seguros|1417|1417 - Seg. Compreensivo Oper. Portuários|ativo|Seguro de Danos|Seguro de Danos|Marítimos|Compreensivo Oper. Portuários|
+Seguros|1428|1428 - R. C. Facult. para Embarcações-RCF|ativo|Seguro de Danos|Seguro de Danos|Marítimos|RC Facultativa Embarcações|
+Seguros|1433|1433 - Marítimos (Cascos)|ativo|Seguro de Danos|Seguro de Danos|Marítimos|Casco|
+Seguros|1457|1457 - DPEM|ativo|Seguro de Danos|Seguro de Danos|Marítimos|DPEM|
+Seguros|1528|1528 - R. C. Facult. para Aeronaves - RCF|ativo|Seguro de Danos|Seguro de Danos|Aeronáuticos|RC Facultativa Aeronaves|
+Seguros|1535|1535 - Aeronáuticos (cascos)|ativo|Seguro de Danos|Seguro de Danos|Aeronáuticos|Cascos|
+Seguros|1537|1537 - RESPONSABILIDADE CIVIL HANGAR|ativo|Seguro de Danos|Seguro de Danos|Aeronáuticos|RC Hangar|
+Seguros|1597|1597 - Resp. Explor. ou Transp. Aéreo-RETA|ativo|Seguro de Danos|Seguro de Danos|Aeronáuticos|RETA|
+Seguros|1601|1601 - Microsseguros de Pessoas|ativo|Seguro de Pessoas|Seguro de Pessoas|Microsseguros|Microsseguros de Pessoas|
+Seguros|1602|1602 - Microsseguros de Danos|ativo|Seguro de Danos|Seguro de Danos|Microsseguros|Microsseguros de Danos|
+Seguros|1603|1603 - Microsseguros - Previdência|ativo|Previdência (EAPC)|Previdência (EAPC)|Microsseguros|Microsseguros de Previdência|

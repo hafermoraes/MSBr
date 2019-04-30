@@ -1,0 +1,5 @@
+http://stackoverflow.com/questions/1429907/workflow-for-statistical-analysis-and-report-writing
+
+http://files.meetup.com/1685538/Rmeetup_Workflow_fullscreen.pdf
+
+http://www.r-statistics.com/2010/09/managing-a-statistical-analysis-project-guidelines-and-best-practices/
