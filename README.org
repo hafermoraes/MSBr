@@ -1,0 +1,17 @@
+
+* MSBr - Acompanhamento do Mercado Segurador Brasileiro
+Projeto experimental cujo objetivo foi centralizar em um relatório os principais indicadores econômicos que afetam a dinâmica do mercado segurador, automatizar a tarefa de atualizar seu conteúdo por meio do forte uso de linguagens de script, reduzindo a intervenção humana na atualização dos dados.
+
+De grande porte, o projeto buscou utilizar diferentes linguagens de programação nas tarefas corretas
+- =perl= e =python= para raspagem de dados (exemplo: raspagem de dados de índices econômicos hospedados no ipea.gov.br)
+- =sql= para tratamento de grandes volumes de dados e cruzamento de tabelas (ses_seguros.csv tem mais de 500.000 registros)
+- =seq=, =tr=, =bash= para ajustes finos em arquivos de texto (trocar vírgula por ponto antes de importar os registros no banco de dados SQLite3)
+- =Sweave= e =LaTeX= para a escrita do conteúdo do relatório e garantia da reprodutibilidade do trabalho
+- =R= pela infinidade de bibliotecas, pela conveniência e facilidade ao trabalhar com tabelas, gráficos de alta qualidade e análises mais aprofundadas, em suma, uma jóia para o cientista de dados na atualidade
+- =GNU Make= e =Makefiles= para amarrar a cada passo do processo. [[https://kbroman.org/minimal_make/][Karl Broman]] estava certo ao afirmar que =Gnu Make= é a ferramente mais importante em pesquisa reprodutível...
+
+Neste caso a viagem foi mais importante do que o destino, já que demonstrou a forca da filosofia Unix na elaboração de um relatório técnico de negócios:
+- Escreva programas que façam apenas uma coisa mas que façam bem feito.
+- Escreva programas que trabalhem juntos.
+- Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
+Fonte: http://www.catb.org/~esr/writings/taoup/html/ch01s06.html
