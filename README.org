@@ -10,7 +10,7 @@ De grande porte, o projeto buscou utilizar diferentes linguagens de programaçã
 - =R= pela infinidade de bibliotecas, pela conveniência e facilidade ao trabalhar com tabelas, gráficos de alta qualidade e análises mais aprofundadas, em suma, uma jóia para o cientista de dados na atualidade
 - =GNU Make= e =Makefiles= para amarrar a cada passo do processo. [[https://kbroman.org/minimal_make/][Karl Broman]] estava certo ao afirmar que =Gnu Make= é a ferramente mais importante em pesquisa reprodutível...
 
-Neste caso a viagem foi mais importante do que o destino, já que demonstrou a forca da filosofia Unix na elaboração de um relatório técnico de negócios:
+Neste caso a viagem foi mais importante do que o destino, já que demonstrou a força da filosofia Unix na elaboração de um relatório técnico de negócios:
 - Escreva programas que façam apenas uma coisa mas que façam bem feito.
 - Escreva programas que trabalhem juntos.
 - Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
