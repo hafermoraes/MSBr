@@ -1,6 +1,6 @@
 
 * MSBr - Acompanhamento do Mercado Segurador Brasileiro
-Projeto experimental cujo objetivo foi centralizar em um relatório os principais indicadores econômicos que afetam a dinâmica do mercado segurador, automatizar a tarefa de atualizar seu conteúdo por meio do forte uso de linguagens de script, reduzindo a intervenção humana na atualização dos dados.
+Projeto experimental cujo objetivo foi centralizar em um relatório os principais indicadores econômicos que afetam a dinâmica do mercado segurador, automatizar a tarefa de atualizar seu conteúdo por meio do forte uso de linguagens de /script/, reduzindo a intervenção humana na atualização dos dados.
 
 De grande porte, o projeto buscou utilizar diferentes linguagens de programação nas tarefas corretas
 - =perl= e =python= para raspagem de dados (exemplo: raspagem de dados de índices econômicos hospedados no ipea.gov.br)
@@ -13,5 +13,5 @@ De grande porte, o projeto buscou utilizar diferentes linguagens de programaçã
 Neste caso a viagem foi mais importante do que o destino, já que demonstrou a força da filosofia Unix na elaboração de um relatório técnico de negócios:
 - Escreva programas que façam apenas uma coisa mas que façam bem feito.
 - Escreva programas que trabalhem juntos.
-- Escreva programas que manipulem streams de texto, pois esta é uma interface universal.
+- Escreva programas que manipulem /streams/ de texto, pois esta é uma interface universal.
 Fonte: http://www.catb.org/~esr/writings/taoup/html/ch01s06.html
